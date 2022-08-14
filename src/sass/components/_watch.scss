@@ -1,0 +1,51 @@
+.watchpage {
+  width: 95%;
+  .react-player {
+    height: 70vh !important;
+    width: 100% !important;
+  }
+  .keyWords {
+    color: #4d66d4;
+  }
+  h3 {
+    font-size: 20px;
+    font-family: "youtube-sans-light";
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 8px 0;
+    color: $title-color;
+    word-wrap: break-word;
+  }
+  .views_date {
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    margin-bottom: 20px;
+    span {
+      &:nth-child(2) {
+        margin: 0 20px;
+      }
+      &:nth-child(3) {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+  .description {
+    font-size: 16px;
+    color: $desc-color;
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}

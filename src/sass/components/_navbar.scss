@@ -1,0 +1,133 @@
+.desktopNav {
+  overflow: hidden;
+  background-color: #fff;
+  @media only screen and (max-width: 700px) {
+    background-color: $main-color;
+  }
+  box-shadow: 0 1px 3px rgba(186, 190, 199, 0.1),
+    0 1px 2px rgba(16, 24, 40, 0.1);
+  position: fixed;
+  @media only screen and (max-width: 700px) {
+    position: absolute;
+  }
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+  .navContainer {
+    width: 90%;
+    margin: auto;
+    .navFlex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media only screen and (max-width: 700px) {
+        margin-top: 8px;
+      }
+      .desktopLogo {
+        width: 100px;
+        height: 50px;
+      }
+      .mobLogo {
+        width: 60px;
+        height: 40px;
+        margin-top: 5px;
+      }
+      .searchText {
+        color: #fff;
+        margin-left: 10px;
+        @media only screen and (min-width: 700px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .searchBar {
+    width: 500px;
+    @media only screen and (max-width: 700px) {
+      width: 75%;
+    }
+    margin: auto;
+    position: relative;
+    input {
+      width: 89%;
+      @media only screen and (max-width: 700px) {
+        width: 80%;
+      }
+      height: 40px;
+      padding: 0 10px;
+      color: $title-color;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      z-index: 2;
+      &:focus {
+        border: 1.1px solid #ccc;
+        outline: 1px solid #ccc;
+      }
+    }
+    button {
+      position: absolute;
+      width: 11%;
+      @media only screen and (max-width: 700px) {
+        width: 20%;
+      }
+      height: 40px;
+      border: 1px solid #ccc;
+      border-left: 0;
+      top: 0px;
+      right: 0;
+      border-radius: 0px 4px 4px 0;
+      cursor: pointer;
+      font-size: 14px;
+      text-align: center;
+      background-color: #f0f0f0;
+      z-index: 1;
+      svg {
+        font-size: 17px;
+        path {
+          fill: $desc-color;
+        }
+      }
+      &:hover {
+        background-color: #e4e4e4;
+      }
+    }
+  }
+  .mobSearchBar {
+    width: 100%;
+    .mobInput {
+      margin-left: 20px;
+      width: 100%;
+      height: 40px;
+      padding: 0 10px;
+      color: $title-color;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      &:focus {
+        border: 1.1px solid #ccc;
+        outline: 1px solid #ccc;
+      }
+    }
+    .mobIcon {
+      font-size: 22px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      path {
+        fill: #fff;
+      }
+    }
+    .mobForm {
+      width: 80%;
+      position: relative;
+    }
+    .closeIcon {
+      position: absolute;
+      right: 0px;
+      top: 12px;
+      path {
+        color: $desc-color;
+      }
+    }
+  }
+}

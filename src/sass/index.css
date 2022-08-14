@@ -1,0 +1,581 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "youtube-sans-light";
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+}
+
+.layout {
+  overflow-x: hidden;
+}
+
+main {
+  width: 65%;
+  padding-top: 60px;
+  margin: 20px auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    width: 90%;
+  }
+}
+
+.dFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 90vh;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.loadBtn {
+  background-color: #fff;
+  -webkit-box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+          box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 700px) {
+  .loadBtn {
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+  }
+}
+
+.button-64 span {
+  background-color: #05062d;
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+@font-face {
+  font-family: "youtube-sans-light";
+  src: local("youtube-sans-light"), url("../Font/youtube-sans-light.ttf") format("truetype");
+}
+
+.cardSize {
+  height: 202px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+@media only screen and (max-width: 700px) {
+  .cardSize {
+    height: 90px;
+  }
+}
+
+.cardSize .cardFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cardSize section.previewContainer {
+  position: relative;
+}
+
+.cardSize section.previewContainer img {
+  width: 360px;
+  height: 202px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .cardSize section.previewContainer img {
+    height: 90px;
+    width: 160px;
+  }
+}
+
+.cardSize:hover .moreButton {
+  opacity: 1 !important;
+}
+
+.cardSize .timeStatus {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+  margin: 4px;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.cardSize .contentContainer {
+  padding-top: 5px;
+  padding-right: 15px;
+  overflow: hidden;
+}
+
+.cardSize .contentContainer h3 {
+  font-size: 20px;
+  font-family: "youtube-sans-light";
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+  color: #030303;
+  word-wrap: break-word;
+}
+
+@media only screen and (max-width: 700px) {
+  .cardSize .contentContainer h3 {
+    font-size: 14px;
+  }
+}
+
+.cardSize .contentContainer .viewData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.cardSize .contentContainer .viewData p {
+  font-size: 14px;
+  color: #606060;
+  font-family: "youtube-sans-light";
+}
+
+@media only screen and (max-width: 700px) {
+  .cardSize .contentContainer .viewData p {
+    font-size: 12px;
+  }
+}
+
+.cardSize .contentContainer .viewData span {
+  margin: 0 5px;
+}
+
+.cardSize .contentContainer .desc {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #606060;
+}
+
+@media only screen and (max-width: 700px) {
+  .cardSize .contentContainer .desc {
+    display: none;
+  }
+}
+
+.cardSize .contentContainer .moreButton {
+  opacity: 0;
+  width: 23px;
+  height: 23px;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.cardSize .contentContainer .moreButton svg {
+  font-size: 18px;
+}
+
+.cardSize .contentContainer .badge {
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #606060;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 12px;
+  padding: 2px 4px;
+  font-weight: 600;
+}
+
+.desktopNav {
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(186, 190, 199, 0.1), 0 1px 2px rgba(16, 24, 40, 0.1);
+          box-shadow: 0 1px 3px rgba(186, 190, 199, 0.1), 0 1px 2px rgba(16, 24, 40, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 700px) {
+  .desktopNav {
+    background-color: #ff0000;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .desktopNav {
+    position: absolute;
+  }
+}
+
+.desktopNav .navContainer {
+  width: 90%;
+  margin: auto;
+}
+
+.desktopNav .navContainer .navFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .desktopNav .navContainer .navFlex {
+    margin-top: 8px;
+  }
+}
+
+.desktopNav .navContainer .navFlex .desktopLogo {
+  width: 100px;
+  height: 50px;
+}
+
+.desktopNav .navContainer .navFlex .mobLogo {
+  width: 60px;
+  height: 40px;
+  margin-top: 5px;
+}
+
+.desktopNav .navContainer .navFlex .searchText {
+  color: #fff;
+  margin-left: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+  .desktopNav .navContainer .navFlex .searchText {
+    display: none;
+  }
+}
+
+.desktopNav .searchBar {
+  width: 500px;
+  margin: auto;
+  position: relative;
+}
+
+@media only screen and (max-width: 700px) {
+  .desktopNav .searchBar {
+    width: 75%;
+  }
+}
+
+.desktopNav .searchBar input {
+  width: 89%;
+  height: 40px;
+  padding: 0 10px;
+  color: #030303;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 700px) {
+  .desktopNav .searchBar input {
+    width: 80%;
+  }
+}
+
+.desktopNav .searchBar input:focus {
+  border: 1.1px solid #ccc;
+  outline: 1px solid #ccc;
+}
+
+.desktopNav .searchBar button {
+  position: absolute;
+  width: 11%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-left: 0;
+  top: 0px;
+  right: 0;
+  border-radius: 0px 4px 4px 0;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  background-color: #f0f0f0;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 700px) {
+  .desktopNav .searchBar button {
+    width: 20%;
+  }
+}
+
+.desktopNav .searchBar button svg {
+  font-size: 17px;
+}
+
+.desktopNav .searchBar button svg path {
+  fill: #606060;
+}
+
+.desktopNav .searchBar button:hover {
+  background-color: #e4e4e4;
+}
+
+.desktopNav .mobSearchBar {
+  width: 100%;
+}
+
+.desktopNav .mobSearchBar .mobInput {
+  margin-left: 20px;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  color: #030303;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.desktopNav .mobSearchBar .mobInput:focus {
+  border: 1.1px solid #ccc;
+  outline: 1px solid #ccc;
+}
+
+.desktopNav .mobSearchBar .mobIcon {
+  font-size: 22px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.desktopNav .mobSearchBar .mobIcon path {
+  fill: #fff;
+}
+
+.desktopNav .mobSearchBar .mobForm {
+  width: 80%;
+  position: relative;
+}
+
+.desktopNav .mobSearchBar .closeIcon {
+  position: absolute;
+  right: 0px;
+  top: 12px;
+}
+
+.desktopNav .mobSearchBar .closeIcon path {
+  color: #606060;
+}
+
+.channelCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2px solid rgba(96, 96, 96, 0.2);
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.channelCard img {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.channelCard h3 {
+  font-size: 20px;
+  font-family: "youtube-sans-light";
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+  color: #030303;
+  word-wrap: break-word;
+}
+
+@media only screen and (max-width: 700px) {
+  .channelCard h3 {
+    font-size: 16px;
+  }
+}
+
+.channelCard .subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+}
+
+.channelCard .subscribe p {
+  font-size: 14px;
+  color: #606060;
+  font-family: "youtube-sans-light";
+}
+
+@media only screen and (max-width: 700px) {
+  .channelCard .subscribe p {
+    font-size: 12px;
+  }
+}
+
+.channelCard .subscribe span {
+  margin: 0 5px;
+}
+
+.channelCard .desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #606060;
+}
+
+@media only screen and (min-width: 1200px) {
+  .channelCard .desc {
+    width: 70%;
+  }
+}
+
+.secHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(96, 96, 96, 0.1);
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.watchpage {
+  width: 95%;
+}
+
+.watchpage .react-player {
+  height: 70vh !important;
+  width: 100% !important;
+}
+
+.watchpage .keyWords {
+  color: #4d66d4;
+}
+
+.watchpage h3 {
+  font-size: 20px;
+  font-family: "youtube-sans-light";
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 8px 0;
+  color: #030303;
+  word-wrap: break-word;
+}
+
+.watchpage .views_date {
+  font-weight: 600;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.watchpage .views_date span:nth-child(2) {
+  margin: 0 20px;
+}
+
+.watchpage .views_date span:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.watchpage .views_date span:nth-child(3) svg {
+  margin-right: 6px;
+}
+
+.watchpage .description {
+  font-size: 16px;
+  color: #606060;
+}
+
+.watchpage .description button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=index.css.map */

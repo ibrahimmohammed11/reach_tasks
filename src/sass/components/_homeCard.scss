@@ -1,0 +1,126 @@
+.cardSize {
+  height: 202px;
+
+  @media only screen and (max-width: 700px) {
+    height: 90px;
+  }
+
+  margin-bottom: 20px;
+  // background-color: red;
+  position: relative;
+  .cardFlex {
+    display: flex;
+  }
+  section.previewContainer {
+    position: relative;
+    img {
+      width: 360px;
+      height: 202px;
+      object-fit: cover;
+      -webkit-box-shadow: 0 0 5px #000;
+      box-shadow: 0 0 5px #000;
+      margin-right: 20px;
+
+      @media only screen and (max-width: 700px) {
+        height: 90px;
+        width: 160px;
+      }
+    }
+  }
+  &:hover {
+    .moreButton {
+      opacity: 1 !important;
+    }
+  }
+  .timeStatus {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    margin: 4px;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 1px 4px;
+    border-radius: 2px;
+  }
+  .contentContainer {
+    padding-top: 5px;
+    padding-right: 15px;
+    overflow: hidden;
+    h3 {
+      font-size: 20px;
+      font-family: "youtube-sans-light";
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 8px;
+      color: $title-color;
+      word-wrap: break-word;
+
+      @media only screen and (max-width: 700px) {
+        font-size: 14px;
+      }
+    }
+    // .channelName {
+    //   margin: 0;
+    //   font-size: 12px;
+    //   font-family: "youtube-sans-medium";
+    //   color: $desc-color;
+    //   width: 100%;
+    // }
+    .viewData {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      p {
+        font-size: 14px;
+        color: $desc-color;
+        font-family: "youtube-sans-light";
+        @media only screen and (max-width: 700px) {
+          font-size: 12px;
+        }
+      }
+      span {
+        margin: 0 5px;
+      }
+    }
+    .desc {
+      display: block;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $desc-color;
+      @media only screen and (max-width: 700px) {
+        display: none;
+      }
+    }
+    .moreButton {
+      opacity: 0;
+      width: 23px;
+      height: 23px;
+      border: 0;
+      padding: 0;
+      position: absolute;
+      top: 8px;
+      right: 0;
+      cursor: pointer;
+      background-color: transparent;
+      svg {
+        font-size: 18px;
+      }
+    }
+    .badge {
+      margin-top: 10px;
+      background-color: rgba(0, 0, 0, 0.05);
+      color: #606060;
+      width: fit-content;
+      font-size: 12px;
+      padding: 2px 4px;
+      font-weight: 600;
+    }
+  }
+}
